@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+:root {
+    --cor01: #d3d3d3;
+    --cor02: #a9a9a9;
+    --cor03: #808080;
+    --cor04: #303030;
+    --cor05: #101010;
+    --cor06: #000000cc;
+    --cor07: #00000050;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    background-color: black;
+    color: white;
+}
+
+nav ul {
+    background-color: var(--cor03);
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    width: auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--cor05);
+    transition-duration: 0.5s;
+}
+
+header {
+    background-color: var(--cor04);
+    text-align: center;
+    width: auto;
+    height: 100vh;
+    min-width: 320px;
+    min-height: 320px;
+    padding: 0px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 100%;
+    min-width: 320px;
+    min-height: 320px;
+    margin: auto;
+}
+
+.header img {
+    width: 320px;
+    min-width: 320px;
+    border-radius: 50%;
+}
+
+.info {
+    font-size: 1.5em;
+    width: auto;
+    height: min-content;
+    min-height: min-content;
+    min-width: min-content;
+    margin: 0px;
+}
+
+main h2 {
+    font-size: 2em;
+}
+
+main section {
+    background-color: var(--cor04);
+    font: normal 1em arial;
+    text-align: justify;
+    min-width: 320px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 100px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 20px;
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+}
+
+.card:hover {
+    background-color: #ff6400;
+    transition: 0.25s;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+}
+
+footer {
+    background-color: var(--cor03);
+    list-style-type: none;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    text-decoration: none;
+}
+
+.scroll-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6400;
+    color: white;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 15px var(--cor07);
+    padding: 20px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.scroll-top:hover {
+    border-color: white;
+}
