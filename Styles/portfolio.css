@@ -179,6 +179,7 @@ section>h2 {
     position: relative;
     cursor: pointer;
     margin: 20px;
+    border: 2px solid white;
 }
 
 .card .image-box {
@@ -238,7 +239,7 @@ section>h2 {
 .content p {
     font-size: 14px;
     line-height: 1.5;
-    color: #d1d1d1;
+    color: white;
     transform: translateY(50%);
 }
 
