@@ -45,41 +45,117 @@ nav a:hover {
 }
 
 header {
-    background-color: var(--cor04);
-    text-align: center;
-    width: auto;
+    display: grid;
+    place-items: center;
+    margin: 0px;
     height: 100vh;
-    min-width: 320px;
-    min-height: 320px;
-    padding: 0px;
-    margin: auto;
+    background-color: var(--cor04);
+    color: white;
 }
 
 .header {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    width: 90%;
-    height: 100%;
-    min-width: 320px;
-    min-height: 320px;
-    margin: auto;
+    width: 75vw;
+    max-width: 1000px;
+    padding: 50px 30px 50px 20px;
+    background-color: black;
+    border-radius: 24px;
 }
 
 .header img {
-    width: 320px;
-    min-width: 320px;
-    border-radius: 50%;
+    max-width: 280px;
+    width: 35vh;
+    height: 300px;
+    object-fit: cover;
+    margin-left: -60px;
+    margin-right: 30px;
+    border-radius: inherit;
+    box-shadow: 0 60px 40px rgb(0, 0, 0 / 8%);
 }
 
-.info {
+.info h1 {
+    font-size: 3em;
+    font-weight: 400;
+    margin-top: 0;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.info h3 {
     font-size: 1.5em;
-    width: auto;
-    height: min-content;
-    min-height: min-content;
-    min-width: min-content;
-    margin: 0px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 10px;
+    opacity: 0.85;
+}
+
+.info h4 {
+    text-align: justify;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 10px;
+    opacity: 0.75;
+}
+
+.info p {
+    text-align: justify;
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 30px;
+    opacity: 0.5;
+}
+
+@media(width <=600px) {
+    .header {
+        margin: 0px 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 60px;
+        width: 70%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .info img {
+        margin: -100px 0px 30px 0px;
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .info h1 {
+        font-size: 2em;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .info h3 {
+        font-size: 1.5em;
+        margin-right: 0;
+    }
+
+    .info h4 {
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+
+    .info p {
+        max-width: 360px;
+    }
+}
+
+@media(width <=550px) {
+    header {
+        height: 120vh;
+    }
+
+    .header img {
+        height: 45vw;
+        width: 45vw;
+        border-radius: 50%;
+        margin: auto;
+    }
 }
 
 main h2 {
@@ -152,7 +228,7 @@ footer p {
     border: 1px solid transparent;
     box-shadow: 0px 5px 15px var(--cor07);
     padding: 20px 20px;
-    border-radius: 50%;
+    border-radius: 25%;
     cursor: pointer;
     font-size: 20px;
     transition: all 0.3s ease;
