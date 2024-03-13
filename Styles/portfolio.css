@@ -19,7 +19,7 @@
 
 body {
     font-family: var(--fonte-padrao);
-    background-color: black;
+    background-color: var(--cor05);
     color: white;
 }
 
@@ -45,12 +45,11 @@ nav a:hover {
 }
 
 header {
+    color: white;
     display: grid;
     place-items: center;
     margin: 0px;
     height: 100vh;
-    background-color: var(--cor04);
-    color: white;
 }
 
 .header {
@@ -59,7 +58,7 @@ header {
     width: 75vw;
     max-width: 1000px;
     padding: 50px 30px 50px 20px;
-    background-color: black;
+    background-color: var(--cor04);
     border-radius: 24px;
 }
 
