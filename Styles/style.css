@@ -60,7 +60,7 @@ body {
     text-decoration: none;
     transition: color 0.3s ease;
     white-space: nowrap;
-    padding: 15px 10px;
+    padding: 20px 10px;
 }
 
 .nav li:hover a {
@@ -86,20 +86,17 @@ body {
 }
 
 .section-odd {
-    background: gray url('../Image/New-Imagens/pattern-made-with-outlined-hexagons-1.jpg') top center repeat scroll;
+    background: gray url('../Image/New-Imagens/hexagons-1.jpg') top center repeat scroll;
     background-size: 500px 500px;
     box-shadow: inset 0px 0px 15px 1px var(--cor07);
-
-    color: var(--cor01);
     margin: 0px;
     padding: 100px 30px;
 }
 
 .section-even {
-    background: gray url('../Image/New-Imagens/pattern-made-with-outlined-hexagons-2.jpg') top center repeat scroll;
+    background: gray url('../Image/New-Imagens/hexagons-2.jpg') center center repeat scroll;
     background-size: 500px 500px;
     box-shadow: inset 0px 0px 15px 1px var(--cor07);
-
     margin: 0px;
     padding: 100px 30px;
 }
@@ -115,8 +112,9 @@ body {
     background-color: var(--cor03);
     box-shadow: 0px 0px 15px 0px var(--cor07);
     border-radius: 10px;
+    color: var(--cor01);
     text-align: justify;
-    font-size: 5.5vh;
+    font-size: clamp(24px, 5vh, 32px);
     padding: 5vh;
     width: auto;
     height: auto;
@@ -125,9 +123,9 @@ body {
 .odd-txt-img img {
     filter: drop-shadow(0px 4px 4px var(--cor07));
     width: 70vh;
-    max-width: 500px;
+    max-width: 450px;
     height: 70vh;
-    max-height: 500px;
+    max-height: 450px;
 }
 
 .even-txt-img {
@@ -142,29 +140,26 @@ body {
     filter: drop-shadow(0px 4px 4px var(--cor07));
     box-shadow: 0px 0px 15px 0px var(--cor07);
     border-radius: 20px;
-    height: 60vh;
-    max-height: 500px;
-    width: 60vh;
-    max-width: 500px;
+    height: 70vh;
+    max-height: 450px;
+    width: 70vh;
+    max-width: 450px;
 }
 
 .even-sobre-mim {
-    text-align: justify;
     background-color: var(--cor07);
-    font-size: clamp(24px, 4vh, 32px);
-    height: max(100% - 0px, 250px);
-    width: max(50% - 0px, 550px);
+    font-size: clamp(24px, 2vh, 32px);
+    text-align: justify;
+    height: min(100% - 0px, 350px);
+    width: min(100% - 0px, 720px);
     padding: 15px;
     border-radius: 10px;
     margin: 30px;
 }
 
-.odd-projetos img {
-    filter: drop-shadow(0px 4px 4px var(--cor07));
-    width: 70vh;
-    max-width: 500px;
-    height: 70vh;
-    max-height: 500px;
+.even-sobre-mim h3 {
+    font-size: clamp(24px, 5vh, 32px);
+    margin-bottom: 10px;
 }
 
 #projetos .projetos-txt {
@@ -175,6 +170,7 @@ body {
 }
 
 #projetos img {
+    box-shadow: 0px 0px 15px 0px var(--cor07);
     background-color: var(--cor03);
     border-radius: 10px;
     height: 80%;
