@@ -114,10 +114,10 @@ body {
     border-radius: 10px;
     color: var(--cor01);
     text-align: justify;
-    font-size: clamp(24px, 5vh, 32px);
-    padding: 30px;
-    width: min(100% - 0px, 500px);
-    height: min(100% - 0px, 250px);
+    font-size: clamp(24px, 4vh, 32px);
+    padding: 20px;
+    width: min(80% - 0px, 500px);
+    height: min(80% - 0px, 500px);
 }
 
 .odd-txt-img img {
