@@ -28,6 +28,13 @@ body {
     color: white;
 }
 
+/* App */
+#app {
+    padding: 40px 20px;
+    max-width: 320px;
+    margin: auto;
+}
+
 /* NavBar */
 
 .nav-bar {
@@ -50,12 +57,7 @@ body {
     margin: 10px;
 }
 
-/* App */
-#app {
-    padding: 40px 20px;
-    max-width: 320px;
-    margin: auto;
-}
+/* Intro */
 
 .intro {
     display: flex;
@@ -64,14 +66,11 @@ body {
     align-items: center;
     background-color: var(--cor05);
     gap: 32px;
-    border-radius: 0px;
     padding: 30px 0px;
     margin: auto;
 }
 
-.nome {
-    height: fit-content;
-    width: fit-content;
+.apresentacao-nome {
     background-color: var(--cor04);
     border-radius: 20px;
     padding: 20px;
@@ -85,20 +84,23 @@ body {
         inset 0px 1px 0px rgba(255, 255, 255, 0.03);
 }
 
-.nome:hover {
+.apresentacao-nome:hover {
     border: solid 3px var(--cor01);
+    transform: scale(0.98);
     box-shadow: 0px 0px 30px 1px rgba(255, 255, 255, 0.3);
     border-radius: 20px;
-    transition: all .2s;
+    transition: all 0.2s;
 }
 
-.programmer {
+.intro-programmer {
     background: transparent url('../Image/SVG/Programmer-amico.svg') center center no-repeat scroll;
     background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     width: 250px;
     height: 250px;
 }
+
+/* Sobre mim */
 
 .sobre-mim {
     display: flex;
@@ -159,6 +161,8 @@ body {
     font-size: 12px;
 }
 
+/* Projetos */
+
 .projeto {
     display: flex;
     background-color: var(--cor05);
@@ -175,68 +179,128 @@ body {
     padding: 0px;
 }
 
-.card {
-    flex-grow: 1;
-    flex-basis: 200px;
-    width: 250px;
-    height: 250px;
-    background-color: var(--cor01);
-    border-radius: 20px;
-    transition: all .3s;
-    margin-bottom: 32px;
-    box-shadow:
-        0px 8px 8px rgba(0, 0, 0, 0.1),
-        0px 4px 4px rgba(0, 0, 0, 0.1),
-        0px 2px 2px rgba(0, 0, 0, 0.1),
-        0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-        inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
-        inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+.cards {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.card2 {
+/* Slider */
+
+.slider {
+    margin: 0 auto;
     width: 250px;
     height: 250px;
-    background: var(--cor05) url('../Image/New-Imagens/P-mustang.jpg') center center no-repeat scroll;
-    background-size: cover;
-    border-radius: 20px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 250px;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    height: min-content;
+    position: relative;
     transition: all .2s;
 }
 
-.card2:hover {
-    box-shadow: 0px 0px 30px 1px rgba(255, 255, 255, 0.3);
-    transform: scale(0.98);
+.slide img {
+    width: 250px;
     border-radius: 20px;
+    border: solid 2px var(--cor01);
 }
 
-.card-balls {
+.manual-navigation {
+    display: flex;
+    position: absolute;
+    margin-top: -60px;
+    justify-content: center;
+    width: 250px;
+}
+
+.manual-btn {
+    border: solid 2px var(--cor01);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+    transition: all .2s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: var(--cor01);
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -25%;
+}
+
+#radio3:checked~.first {
+    margin-left: -50%;
+}
+
+#radio4:checked~.first {
+    margin-left: -75%;
+}
+
+#radio5:checked~.first {
+    margin-left: -100%;
+}
+
+.navigation-auto div {
+    border: solid 2px darkblue;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.navigation-auto {
     display: flex;
     justify-content: center;
+    position: absolute;
+    margin-top: 190px;
+    width: 250px;
 }
 
-.balls01,
-.balls02,
-.balls03,
-.balls04,
-.balls05 {
-    background-color: var(--cor05);
-    border: solid 2px var(--cor04);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    margin: 10px;
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
 }
 
-.balls03 {
-    background-color: var(--cor03);
-    border: solid 1px var(--cor02);
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: var(--cor01);
 }
 
-.card-balls :hover {
-    box-shadow: 0px 0px 15px 1px rgba(255, 255, 255, 0.3);
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: var(--cor01);
 }
 
-.innovation {
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background-color: var(--cor01);
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background-color: var(--cor01);
+}
+
+#radio5:checked~.navigation-auto .auto-btn5 {
+    background-color: var(--cor01);
+}
+
+.projeto-innovation {
     background: transparent url('../Image/SVG/Innovation-amico.svg') center center no-repeat scroll;
     background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -244,7 +308,9 @@ body {
     height: 250px;
 }
 
-.operating {
+/* Conhecimentos */
+
+.conhecimentos-operating {
     background: transparent url('../Image/SVG/Operating-system-amico.svg') center center no-repeat scroll;
     background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -283,7 +349,8 @@ body {
     margin: 10px;
 }
 
-/*
+/* Fale comigo */
+
 .contato {
     display: flex;
     flex-wrap: wrap;
@@ -318,14 +385,13 @@ body {
     border-radius: 12px;
 }
 
-.live {
+.contato-live {
     background: transparent url('../Image/SVG/Live-collaboration-amico.svg') center center no-repeat scroll;
     background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     width: 250px;
     height: 250px;
 }
-*/
 
 @media (width > 1024px) {
     #app {
@@ -356,7 +422,7 @@ body {
         color: var(--cor06);
     }
 
-    .nome {
+    .apresentacao-nome {
         font-size: 2em;
     }
 
@@ -370,7 +436,7 @@ body {
         height: 350px;
     }
 
-    .programmer {
+    .intro-programmer {
         width: 350px;
         height: 350px;
     }
@@ -383,28 +449,134 @@ body {
         font-size: 1em;
     }
 
+    /* Projeto */
+
     .cards {
         display: flex;
         gap: 32px;
         width: 100%;
     }
 
-    .card {
+    /* Slider */
+
+    .slider {
+        margin: 0 auto;
+        width: 450px;
+        height: 350px;
+        overflow: hidden;
+    }
+    
+    .slides {
+        display: flex;
+        width: 400%;
+        height: 350px;
+    }
+    
+    .slides input {
+        display: none;
+    }
+    
+    .slide {
+        width: 25%;
+        position: relative;
+        transition: all .2s;
+    }
+    
+    .slide img {
+        width: 450px;
+        border-radius: 20px;
+    }
+    
+    .manual-navigation {
+        display: flex;
+        position: absolute;
+        margin-top: -20px;
+        justify-content: center;
+        width: 450px;
+    }
+    
+    .manual-btn {
+        border: solid 2px var(--cor01);
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 5px;
+        transition: all .2s;
+    }
+    
+    .manual-btn:not(:last-child) {
+        margin-right: 40px;
+    }
+    
+    .manual-btn:hover {
+        background-color: var(--cor01);
+    }
+    
+    #radio1:checked~.first {
+        margin-left: 0;
+    }
+    
+    #radio2:checked~.first {
+        margin-left: -25%;
+    }
+    
+    #radio3:checked~.first {
+        margin-left: -50%;
+    }
+    
+    #radio4:checked~.first {
+        margin-left: -75%;
+    }
+    
+    #radio5:checked~.first {
+        margin-left: -100%;
+    }
+    
+    .navigation-auto div {
+        border: solid 2px darkblue;
+        border-radius: 10px;
+        padding: 5px;
+        cursor: pointer;
+        transition: all .2s;
+    }
+    
+    .navigation-auto {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        margin-top: 330px;
+        width: 450px;
+    }
+    
+    .navigation-auto div:not(:last-child) {
+        margin-right: 40px;
+    }
+    
+    #radio1:checked~.navigation-auto .auto-btn1 {
+        background-color: var(--cor01);
+    }
+    
+    #radio2:checked~.navigation-auto .auto-btn2 {
+        background-color: var(--cor01);
+    }
+    
+    #radio3:checked~.navigation-auto .auto-btn3 {
+        background-color: var(--cor01);
+    }
+    
+    #radio4:checked~.navigation-auto .auto-btn4 {
+        background-color: var(--cor01);
+    }
+    
+    #radio5:checked~.navigation-auto .auto-btn5 {
+        background-color: var(--cor01);
+    }
+
+    .projeto-innovation {
         width: 350px;
         height: 350px;
     }
 
-    .card2 {
-        width: 100%;
-        height: 350px;
-    }
-
-    .innovation {
-        width: 350px;
-        height: 350px;
-    }
-
-    .operating {
+    .conhecimentos-operating {
         width: 350px;
         height: 350px;
     }
@@ -426,7 +598,6 @@ body {
         width: 40%;
     }
 
-    /*
     .contato {
         display: flex;
         flex-wrap: nowrap;
@@ -438,11 +609,11 @@ body {
         margin: auto;
     }
 
-    .live {
+    .contato-live {
         width: 350px;
         height: 350px;
     }
-    */
+
 }
 
 footer {
