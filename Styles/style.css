@@ -23,10 +23,11 @@ body {
     font-size: 1em;
     font-family: var(--fonte-padrao);
     background-color: var(--cor06);
-    color: white;
+    color: var(--cor01);
 }
 
 /* App */
+
 #app {
     padding: 40px 20px;
     max-width: 320px;
@@ -83,7 +84,6 @@ body {
 }
 
 .apresentacao-nome:hover {
-    border: solid 3px var(--cor01);
     transform: scale(0.98);
     box-shadow: 0px 0px 30px 1px rgba(255, 255, 255, 0.3);
     border-radius: 20px;
@@ -129,7 +129,6 @@ body {
 .foto-perfil:hover {
     width: 250px;
     height: 250px;
-    border: solid 3px var(--cor01);
     box-shadow: 0px 0px 30px 1px rgba(255, 255, 255, 0.3);
     border-radius: 20px;
     transition: all .2s;
@@ -337,6 +336,7 @@ body {
     width: 200px;
     height: 120px;
     margin: 10px;
+    transition: all .2s;
 }
 
 .con01 {
@@ -373,29 +373,31 @@ body {
 
 /* Fale comigo */
 
-.contato {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: center;
-    background-color: var(--cor05);
-    gap: 32px;
-    margin: auto;
-}
-
-#place {
+.contatos {
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 
-    padding: 22px 16px;
-    font-size: 14px;
-    margin-bottom: 32px;
+.contato {
+    display: flex;
+    flex-direction: column;
 }
 
 .card-bg {
-    background: #18181B;
-
+    color: var(--cor02);
+    display: flex;
+    background-color: var(--cor06);
+    border: 1px solid var(--cor04);
+    border-radius: 15px;
+    font-size: 12px;
+    padding: 15px;
+    width: 200px;
+    gap: 10px;
+    margin: 10px 0px;
+    align-items: center;
     box-shadow:
         0px 8px 8px rgba(0, 0, 0, 0.1),
         0px 4px 4px rgba(0, 0, 0, 0.1),
@@ -403,11 +405,65 @@ body {
         0px 0px 0px 1px rgba(0, 0, 0, 0.1),
         inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
         inset 0px 1px 0px rgba(255, 255, 255, 0.03);
-
-    border-radius: 12px;
 }
 
-.contato-live {
+.card-bg a {
+    color: var(--cor02);
+    text-decoration: none;
+}
+
+.form input {
+    color: var(--cor02);
+    background-color: var(--cor06);
+    border: 2px solid var(--cor04);
+    width: 200px;
+    padding: 20px 15px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    outline: none;
+    box-shadow:
+        0px 8px 8px rgba(0, 0, 0, 0.1),
+        0px 4px 4px rgba(0, 0, 0, 0.1),
+        0px 2px 2px rgba(0, 0, 0, 0.1),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+        inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+        inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+}
+
+.form input:focus-within {
+    outline: 2px solid var(--cor01);
+}
+
+.form button {
+    background-color: var(--cor04);
+    color: var(--cor02);
+    font-size: 1em;
+    border: 1px solid var(--cor01);
+    border-radius: 10px;
+    width: 200px;
+    padding: 15px;
+    margin: 10px 0px;
+    outline: none;
+    box-shadow:
+        0px 8px 8px rgba(0, 0, 0, 0.1),
+        0px 4px 4px rgba(0, 0, 0, 0.1),
+        0px 2px 2px rgba(0, 0, 0, 0.1),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+        inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+        inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+    transition: all .2s;
+}
+
+.form button:focus-within {
+    outline: 2px solid var(--cor01);
+}
+
+.form button:hover {
+    background-color: var(--cor03);
+    color: var(--cor06);
+}
+
+.contatos-live {
     background: transparent url('../Image/SVG/Live-collaboration-amico.svg') center center no-repeat scroll;
     background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -539,26 +595,6 @@ body {
         background-color: var(--cor01);
     }
 
-    #radio1:checked~.first {
-        margin-left: 0;
-    }
-
-    #radio2:checked~.first {
-        margin-left: -25%;
-    }
-
-    #radio3:checked~.first {
-        margin-left: -50%;
-    }
-
-    #radio4:checked~.first {
-        margin-left: -75%;
-    }
-
-    #radio5:checked~.first {
-        margin-left: -100%;
-    }
-
     .navigation-auto div {
         border: solid 2px darkblue;
         border-radius: 10px;
@@ -573,30 +609,6 @@ body {
         position: absolute;
         margin-top: 330px;
         width: 450px;
-    }
-
-    .navigation-auto div:not(:last-child) {
-        margin-right: 40px;
-    }
-
-    #radio1:checked~.navigation-auto .auto-btn1 {
-        background-color: var(--cor01);
-    }
-
-    #radio2:checked~.navigation-auto .auto-btn2 {
-        background-color: var(--cor01);
-    }
-
-    #radio3:checked~.navigation-auto .auto-btn3 {
-        background-color: var(--cor01);
-    }
-
-    #radio4:checked~.navigation-auto .auto-btn4 {
-        background-color: var(--cor01);
-    }
-
-    #radio5:checked~.navigation-auto .auto-btn5 {
-        background-color: var(--cor01);
     }
 
     .projeto-innovation {
@@ -630,27 +642,23 @@ body {
 
     /* contato */
 
-    .contato {
+    .contatos {
         display: flex;
-        flex-wrap: nowrap;
-        align-content: space-around;
-        justify-content: center;
-        background-color: var(--cor05);
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row;
         gap: 32px;
-        padding: 30px 0px;
-        margin: auto;
     }
 
-    .contato-live {
+    .contatos-live {
         width: 350px;
         height: 350px;
     }
-
 }
 
 footer {
     background-color: black;
-    color: white;
+    color: var(--cor02);
     text-align: center;
     padding: 15px 20px;
     border-radius: 0px 0px 20px 20px;
