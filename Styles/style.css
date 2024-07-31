@@ -58,7 +58,7 @@ body {
 
 /* Intro */
 
-.intro {
+.grupo01 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -73,6 +73,7 @@ body {
     background-color: var(--cor04);
     border-radius: 20px;
     padding: 20px;
+    font-size: 1.2em;
     transition: all 0.3s;
     box-shadow:
         0px 8px 8px rgba(0, 0, 0, 0.1),
@@ -99,20 +100,10 @@ body {
 
 /* Sobre mim */
 
-.sobre-mim {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: var(--cor05);
-    gap: 32px;
-    padding: 30px 0px;
-    margin: auto;
-}
-
 .foto-perfil {
     width: 250px;
     height: 250px;
-    background: var(--cor01) url('../Image/New-Imagens/man_in_suit.jpeg') center center no-repeat scroll;
+    background: var(--cor05) url('../Image/New-Imagens/ImagemLuanderson.png') center center no-repeat scroll;
     background-size: cover;
     border-radius: 20px;
     transition: all .3s;
@@ -137,7 +128,6 @@ body {
     background-color: var(--cor04);
     border-radius: 20px;
     text-align: justify;
-    font-size: 1.2em;
     width: 250px;
     padding: 20px;
     box-shadow:
@@ -149,17 +139,14 @@ body {
         inset 0px 1px 0px rgba(255, 255, 255, 0.03);
 }
 
-.sobre-mim-texto h3 {
-    margin-bottom: 12px;
-}
-
 .sobre-mim-texto p {
+    margin-top: 12px;
     font-size: 12px;
 }
 
 /* Projetos */
 
-.projeto {
+.grupo02 {
     display: flex;
     background-color: var(--cor05);
     gap: 32px;
@@ -210,7 +197,13 @@ body {
 .slide img {
     width: 250px;
     border-radius: 20px;
-    border: solid 2px var(--cor01);
+    box-shadow:
+        0px 8px 8px rgba(0, 0, 0, 0.1),
+        0px 4px 4px rgba(0, 0, 0, 0.1),
+        0px 2px 2px rgba(0, 0, 0, 0.1),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+        inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+        inset 0px 1px 0px rgba(255, 255, 255, 0.03);
 }
 
 .manual-navigation {
@@ -320,7 +313,6 @@ body {
     flex-wrap: wrap;
     align-content: space-around;
     justify-content: center;
-    background-color: var(--cor05);
     gap: 32px;
     margin: auto;
 }
@@ -330,9 +322,15 @@ body {
     flex-wrap: wrap;
     flex-grow: 1;
     flex-basis: 120px;
-    border: solid 2px var(--cor04);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
     border-radius: 20px;
+    box-shadow:
+        0px 8px 8px rgba(0, 0, 0, 0.1),
+        0px 4px 4px rgba(0, 0, 0, 0.1),
+        0px 2px 2px rgba(0, 0, 0, 0.1),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+        inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+        inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+    
     width: 200px;
     height: 120px;
     margin: 10px;
@@ -385,6 +383,12 @@ body {
 .contato {
     display: flex;
     flex-direction: column;
+    transition: all .3s;
+}
+
+.contato :hover {
+    transition: all .2s;
+    box-shadow: 0px 0px 30px 1px rgba(255, 255, 255, 0.3);
 }
 
 .card-bg {
@@ -406,11 +410,16 @@ body {
         0px 0px 0px 1px rgba(0, 0, 0, 0.1),
         inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
         inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+    transition: all .2s;
 }
 
 .card-bg a {
     color: var(--cor02);
     text-decoration: none;
+}
+
+.card-bg :hover {
+    box-shadow: none;
 }
 
 .form input {
@@ -433,14 +442,15 @@ body {
 
 .form input:focus-within {
     outline: 2px solid var(--cor01);
+    box-shadow: 0px 0px 30px 1px rgba(255, 255, 255, 0.3);
 }
 
 .form button {
     background-color: var(--cor04);
     color: var(--cor02);
     font-size: 1em;
-    border: 1px solid var(--cor01);
     border-radius: 10px;
+    border: unset;
     width: 200px;
     padding: 15px;
     margin: 10px 0px;
@@ -497,6 +507,7 @@ body {
     .nav-bar a {
         color: var(--cor03);
         text-decoration: none;
+        transition: all .2s;
     }
 
     .nav-bar a:hover {
@@ -528,10 +539,12 @@ body {
 
     .sobre-mim-texto {
         width: 500px;
+        height: 350px;
+        font-size: 1.2em;
     }
 
     .sobre-mim-texto p {
-        font-size: 1em;
+        font-size: 18px;
     }
 
     /* Projeto */
