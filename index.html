@@ -1,235 +1,158 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luanderson // Portfolio</title>
+    <title>Portfólio - Luanderson Arlindo</title>
     <link rel="stylesheet" href="Styles/style.css">
-    <link rel="android-chrome" type="image/png" sizes="512x512" href="Image/favicon_io/android-chrome-512x512.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/Image/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Image/favicon_io/favicon-32x32.png">
 </head>
 
 <body>
-    <div id="app">
-        <header>
-            <nav id="nav" class="nav-bar">
-                <div class="menu-burger">
-                </div>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="#" class="navbar-brand">Luanderson</a>
 
-                <ul class="nav-long">
-                    <li><a href="#">Sobre mim</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">Conhecimentos</a></li>
-                    <li><a href="#">Fale comigo</a></li>
+                <button class="navbar-toggle" id="navbarToggle">☰</button>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="#project" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
                 </ul>
-            </nav>
-        </header>
+            </div>
+        </nav>
 
-        <main>
+        <div style="margin-top: 80px; padding: 20px;">
+            <!-- Seu conteúdo aqui -->
+        </div>
+    </header>
 
-            <section id="intro" class="grupo01">
-                <div class="apresentacao-nome">
-                    <h1>Luanderson Arlindo</h1>
-                    <h2>Desenvolvedor Web</h2>
-                </div>
-                <div class="intro-programmer">
-                </div>
-            </section>
+    <section id="home" class="grid-section">
+        <div class="image-container">
+            <img src="Image/SVG/Programmer-amico.svg" alt="Programmer">
+        </div>
+        <div class="content">
+            <h1>Luanderson Arlindo</h1>
+            <h2>Desenvolvedor Backend</h2>
+            <p>Busco oportunidades para ampliar minha experiência profissional, contribuindo com soluções inovadoras e
+                agregando valor a equipes e projetos desafiadores.</p>
+            <button>My resume</button>
+            <button class="secondary">Get in touch →</button>
+        </div>
+    </section>
 
-            <section id="sobreMim" class="grupo01">
-                <div class="foto-perfil">
+    <section id="about" class="grid-section">
+        <div class="about-imagem">
+            <img src="Image/New-Imagens/Imagem do WhatsApp de 2025-01-21 à(s) 20.39.58_02e51f07.jpg" alt="Perfil">
+        </div>
+        <div class="about-content">
+            <h2>About me</h2>
+            <p class="pd">Sou um desenvolvedor backend em busca da minha primeira oportunidade.</p>
+            <p>Conhecimentos em <b>Spring Boot</b> e experiência prática no desenvolvimento de aplicações robustas e
+                escaláveis. Possuo domínio em bancos de dados relacionais (<b>MySQL</b> e <b>PostgreSQL</b>) e
+                familiaridade com
+                metodologias ágeis, como Scrum, para organização e entrega eficiente de projetos.
+
+                Com base em conhecimentos em algoritmos e estruturas de dados, atuo de forma proativa na resolução de
+                problemas técnicos e na otimização de soluções. Minha experiência inclui o uso de tecnologias como
+                <b>Java</b>, <b>JavaScript</b>, <b>Node.js</b>, <b>HTML e CSS</b>, aplicadas em projetos que visam
+                qualidade e boas
+                práticas de
+                desenvolvimento.
+            </p>
+            <button>My resume</button>
+        </div>
+    </section>
+
+    <section id="project">
+        <div class="project-content">
+            <h2>Project</h2>
+            <p class="pd">Veja meus projetos em destaque.</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project">
+                <!-- Nova div para a imagem -->
+                <div class="project-image">
+                    <img src="Image/New-Imagens/P-car01.jpg" alt="car01">
                 </div>
-                <div class="sobre-mim-texto">
-                    <h3>Sobre mim</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, ex quae, non nam
-                        repudiandae
-                        eaque adipisci commodi, dignissimos maiores quo veritatis architecto veniam. Mollitia maxime
-                        doloremque ducimus natus molestiae laudantium!
-                        Rerum magni reprehenderit, laboriosam quod nulla amet debitis modi animi? Ipsum molestiae ut
-                        omnis veritatis facere nostrum magni asperiores laudantium tempora ipsam ducimus velit
-                        quisquam,
-                        illo doloremque. Dolorum, sint natus.
+                <div class="project-info">
+                    <h3>Dec 2024</h3>
+                    <h4>Roteiro de viagem</h4>
+                    <p>Criação de uma plataforma para montar um roteiro de viagem, cadastrando atividades usando o
+                        <b>JavaScript</b>, <b>HTML5</b>, <b>CSS3</b> como tecnologias e o Visual Studio Code como a
+                        pricipal ferramenta.
                     </p>
                 </div>
-            </section>
+            </div>
 
-            <section id="projeto" class="grupo02">
-                <h3>Projetos</h3>
-
-                <div class="cards">
-                    <div class="slider">
-                        <div class="slides">
-                            <!-- Radio Buttons -->
-                            <input type="radio" name="radImage" id="radio1" />
-                            <input type="radio" name="radImage" id="radio2" />
-                            <input type="radio" name="radImage" id="radio3" />
-                            <input type="radio" name="radImage" id="radio4" />
-                            <input type="radio" name="radImage" id="radio5" />
-
-                            <!-- Slide Imagens -->
-                            <div class="slide first">
-                                <img src="Image/New-Imagens/P-car01.jpg" alt="car01">
-                            </div>
-
-                            <div class="slide">
-                                <img src="Image/New-Imagens/P-car02.jpg" alt="car02">
-                            </div>
-
-                            <div class="slide">
-                                <img src="Image/New-Imagens/P-car03.jpg" alt="car03">
-                            </div>
-
-                            <div class="slide">
-                                <img src="Image/New-Imagens/P-car04.jpg" alt="car04">
-                            </div>
-
-                            <div class="slide">
-                                <img src="Image/New-Imagens/P-car05.jpg" alt="car05">
-                            </div>
-
-                            <!-- Navigation auto -->
-                            <div class="navigation-auto">
-                                <div class="auto-btn1"></div>
-                                <div class="auto-btn2"></div>
-                                <div class="auto-btn3"></div>
-                                <div class="auto-btn4"></div>
-                                <div class="auto-btn5"></div>
-                            </div>
-
-                        </div>
-
-                        <div class="manual-navigation">
-                            <label for="radio1" class="manual-btn"></label>
-                            <label for="radio2" class="manual-btn"></label>
-                            <label for="radio3" class="manual-btn"></label>
-                            <label for="radio4" class="manual-btn"></label>
-                            <label for="radio5" class="manual-btn"></label>
-                        </div>
-
-                    </div>
-                    <div class="projeto-innovation">
-                    </div>
+            <div class="project">
+                <!-- Nova div para a imagem -->
+                <div class="project-image">
+                    <img src="Image/New-Imagens/P-car02.jpg" alt="car02">
                 </div>
-            </section>
-
-            <section id="conhecimentos" class="grupo02">
-                <h3>Conhecimentos</h3>
-
-                <div class="conhecimentos">
-                    <div class="conhecimentos-operating">
-                    </div>
-                    <div class="conh">
-                        <div class="con01"></div>
-                        <div class="con02"></div>
-                        <div class="con03"></div>
-                        <div class="con04"></div>
-                    </div>
+                <div class="project-info">
+                    <h3>Dec 2024</h3>
+                    <h4>Registro de metas</h4>
+                    <p>Criação de uma plataforma para registro de metas com progresso semanal usando o <b>JavaScript</b>
+                        e <b>Node.js</b> como tecnologias e o Visual Studio Code como a pricipal ferramenta.</p>
                 </div>
-            </section>
+            </div>
 
-            <section id="faleComigo" class="grupo02">
-                <h3>Fale comigo</h3>
-
-                <div class="contatos">
-                    <div class="contato">
-                        <div id="place-number" class="card-bg">
-                            <div class="img-svg">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
-                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                    <path fill="#A1A1AA"
-                                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
-                                </svg>
-                            </div>
-
-                            <span>(81) 993149643</span>
-                        </div>
-
-                        <div id="place-email" class="card-bg">
-                            <div class="img-svg">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
-                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                    <path fill="#A1A1AA"
-                                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
-                                </svg>
-                            </div>
-
-                            <span>luan.arlindo20166@gmail</span>
-                        </div>
-
-                        <div id="place-linkedin" class="card-bg">
-                            <div class="img-svg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0,0,256,256">
-                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
-                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
-                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                                        <g transform="scale(5.33333,5.33333)">
-                                            <path
-                                                d="M42,37c0,2.762 -2.238,5 -5,5h-26c-2.761,0 -5,-2.238 -5,-5v-26c0,-2.762 2.239,-5 5,-5h26c2.762,0 5,2.238 5,5z"
-                                                fill="#A1A1AA"></path>
-                                            <path
-                                                d="M12,19h5v17h-5zM14.485,17h-0.028c-1.492,0 -2.457,-1.112 -2.457,-2.501c0,-1.419 0.995,-2.499 2.514,-2.499c1.521,0 2.458,1.08 2.486,2.499c0,1.388 -0.965,2.501 -2.515,2.501zM36,36h-5v-9.099c0,-2.198 -1.225,-3.698 -3.192,-3.698c-1.501,0 -2.313,1.012 -2.707,1.99c-0.144,0.35 -0.101,1.318 -0.101,1.807v9h-5v-17h5v2.616c0.721,-1.116 1.85,-2.616 4.738,-2.616c3.578,0 6.261,2.25 6.261,7.274l0.001,9.726z"
-                                                fill="#18181B"></path>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </div>
-
-                            <span><a href="https://www.linkedin.com/in/luanderson-arlindo/"
-                                    target="_blank">luanderson-arlindo</a></span>
-                        </div>
-
-                        <div id="place-github" class="card-bg">
-                            <div class="img-svg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0,0,256,256">
-                                    <g fill="#A1A1AA" fill-rule="nonzero" stroke="none" stroke-width="1"
-                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
-                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                                        <g transform="scale(10.66667,10.66667)">
-                                            <path
-                                                d="M10.9,2.1c-4.6,0.5 -8.3,4.2 -8.8,8.7c-0.6,5 2.5,9.3 6.9,10.7v-2.3c0,0 -0.4,0.1 -0.9,0.1c-1.4,0 -2,-1.2 -2.1,-1.9c-0.1,-0.4 -0.3,-0.7 -0.6,-1c-0.3,-0.1 -0.4,-0.1 -0.4,-0.2c0,-0.2 0.3,-0.2 0.4,-0.2c0.6,0 1.1,0.7 1.3,1c0.5,0.8 1.1,1 1.4,1c0.4,0 0.7,-0.1 0.9,-0.2c0.1,-0.7 0.4,-1.4 1,-1.8c-2.3,-0.5 -4,-1.8 -4,-4c0,-1.1 0.5,-2.2 1.2,-3c-0.1,-0.2 -0.2,-0.7 -0.2,-1.4c0,-0.4 0,-1 0.3,-1.6c0,0 1.4,0 2.8,1.3c0.5,-0.2 1.2,-0.3 1.9,-0.3c0.7,0 1.4,0.1 2,0.3c1.3,-1.3 2.8,-1.3 2.8,-1.3c0.2,0.6 0.2,1.2 0.2,1.6c0,0.8 -0.1,1.2 -0.2,1.4c0.7,0.8 1.2,1.8 1.2,3c0,2.2 -1.7,3.5 -4,4c0.6,0.5 1,1.4 1,2.3v3.3c4.1,-1.3 7,-5.1 7,-9.5c0,-6 -5.1,-10.7 -11.1,-10z">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </div>
-
-                            <span><a href="https://github.com/luandersonarlindo"
-                                    target="_blank">luandersonarlindo</a></span>
-                        </div>
-                    </div>
-
-                    <div class="form">
-                        <form onsubmit="salvaContato(event)">
-                            <div class="formContato">
-                                <div class="email">
-                                    <input type="email" placeholder="Email" name="email" required>
-                                </div>
-                                <div class="nome">
-                                    <input type="text" placeholder="Nome" name="nome" required>
-                                </div>
-                                <div class="mensagem">
-                                    <input type="text" placeholder="Mensagem" name="mensagem" required>
-                                </div>
-                            </div>
-
-                            <button>Enviar</button>
-                        </form>
-                    </div>
-                    <div class="contatos-live">
-                    </div>
+            <div class="project">
+                <!-- Nova div para a imagem -->
+                <div class="project-image">
+                    <img src="Image/New-Imagens/P-car03.jpg" alt="car03">
                 </div>
-            </section>
+                <div class="project-info">
+                    <h3>Jan 2025</h3>
+                    <h4>Planejador</h4>
+                    <p>Backend da aplicação desenvolvida durante o NLW Journey da Rocketseat.</p>
+                </div>
+            </div>
 
-        </main>
+            <div class="project">
+                <!-- Nova div para a imagem -->
+                <div class="project-image">
+                    <img src="Image/New-Imagens/P-car04.jpg" alt="car04">
+                </div>
+                <div class="project-info">
+                    <h3>Jan 2025</h3>
+                    <h4>Gerenciador de tarefas</h4>
+                    <p>API do zero usando Java e Spring Boot, aprendendo as principais práticas para criação de backend.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button>See more →</button>
+    </section>
 
-        <footer>
-            <p>©NeverEver</p>
-        </footer>
-    </div>
+    <section id="contact">
+        <div class="contact-image">
+            <img src="Image/SVG/Live-collaboration-amico.svg" alt="Contact">
+        </div>
+        <div class="contact-content">
+            <h2>Contact</h2>
+            <p class="pd">Gostou do meu trabalho? Vamos trabalhar juntos. Estou compartilhando para um bate-papo. Envia uma mensagem nas redes sociais.</p>
+            <form>
+                <input type="text" id="name" name="name" required placeholder="Name">
+                <input type="email" id="email" name="email" required placeholder="Email">
+                <input type="text" id="message" name="message" required placeholder="Your message">
+                <button type="submit" class="secondary">Send me a message →</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Luanderson Arlindo 2025. Layout based on Rocksteader Template.</p>
+        <div class="social-media">
+            <a href="https://github.com/luandersonarlindo" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/luandersonarlindo" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/luanderson.arlindo/" target="_blank">Instagram</a>
+        </div>
+    </footer>
 
     <script src="Scripts/script.js"></script>
 </body>

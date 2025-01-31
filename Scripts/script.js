@@ -1,29 +1,35 @@
+const toggleButton = document.getElementById('navbarToggle');
+const navbarNav = document.querySelector('.navbar-nav');
 
-/* Nav */
+toggleButton.addEventListener('click', () => {
+  navbarNav.classList.toggle('active');
+});
 
-/* Intro */
+// Fechar menu ao clicar em um link (mobile)
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navbarNav.classList.remove('active');
+  });
+});
 
-/* Sobre mim */
+document.querySelector('form').addEventListener('submit', function (event) {
+  event.preventDefault();
+  alert('Mensagem enviada com sucesso!');
+  this.reset();
+});
 
-/* Projeto */
+function adjustLayout() {
+  const screenWidth = window.innerWidth;
+  const body = document.body;
 
-let count = 1;
-document.getElementById('radio1').checked = true;
-
-setInterval(function () {
-    nextImage()
-}, 5000)
-
-function nextImage() {
-    count++;
-    if (count > 5) {
-        count = 1;
-    }
-
-    document.getElementById('radio' + count).checked = true;
-
+  if (screenWidth <= 768) {
+    body.classList.add('mobile');
+    body.classList.remove('desktop');
+  } else {
+    body.classList.add('desktop');
+    body.classList.remove('mobile');
+  }
 }
 
-/* Conhecimento */
-
-/* Fale comigo */
+window.addEventListener('resize', adjustLayout);
+window.addEventListener('load', adjustLayout);
