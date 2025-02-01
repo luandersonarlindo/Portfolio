@@ -93,7 +93,6 @@ section {
     margin: 20px 0;
     padding: 20px;
     border-radius: 16px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* HOME */
@@ -102,6 +101,13 @@ section {
 #contact,
 div>.project {
     background-color: var(--cor04);
+    box-shadow:
+        0px 8px 8px rgba(0, 0, 0, 0.1),
+        0px 4px 4px rgba(0, 0, 0, 0.1),
+        0px 2px 2px rgba(0, 0, 0, 0.1),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+        inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+        inset 0px 1px 0px rgba(255, 255, 255, 0.03);
 }
 
 .grid-section {
@@ -203,12 +209,25 @@ button {
     background-color: var(--cor05);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor03);
+    transition: all 0.5s;
 }
 
 button.secondary {
     background-color: var(--cor02);
+}
+
+button.secondary:hover {
+    background-color: var(--cor01);
+}
+
+button.navbar-toggle {
+    background-color: transparent;
 }
 
 /* PROJECT */
@@ -239,14 +258,27 @@ button.secondary {
     align-content: start;
     padding: 15px;
     border-radius: 16px;
+    transition: all 0.5ms;
+}
+
+.project:hover {
+    background-color: var(--cor09);
+    box-shadow: 0 2px 15px rgb(0, 118, 118, 1);
 }
 
 /* Estilos para a imagem do projeto */
 .project-image {
     max-width: 420px;
-    max-height: 260px;
+    height: 220px;
     margin: auto;
     border-radius: 16px;
+    box-shadow:
+        0px 8px 8px rgba(0, 0, 0, 0.1),
+        0px 4px 4px rgba(0, 0, 0, 0.1),
+        0px 2px 2px rgba(0, 0, 0, 0.1),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+        inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+        inset 0px 1px 0px rgba(255, 255, 255, 0.03);
     /* Espaço entre a imagem e o conteúdo */
     overflow: hidden;
     /* Garante que a imagem não ultrapasse os limites */
@@ -262,6 +294,10 @@ button.secondary {
 .project-info {
     text-align: justify;
     margin-top: 10px;
+}
+
+.project-info h3 {
+    color: var(--cor11);
 }
 
 /* CONTACT */
@@ -294,12 +330,20 @@ button.secondary {
     max-width: 500px;
 }
 
-#contact input {
+#contact input,
+textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid var(--cor04);
+    border: none;
     border-radius: 8px;
     background-color: var(--cor11);
+    box-shadow:
+        0px 8px 8px rgba(0, 0, 0, 0.1),
+        0px 4px 4px rgba(0, 0, 0, 0.1),
+        0px 2px 2px rgba(0, 0, 0, 0.1),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+        inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+        inset 0px 1px 0px rgba(255, 255, 255, 0.03);
     color: white;
 }
 
@@ -370,6 +414,8 @@ footer p {
         display: block;
     }
 
+    /* ABOUT */
+
     .grid-section {
         grid-template-columns: 1fr;
         text-align: center;
@@ -405,6 +451,8 @@ footer p {
         font-size: 0.9em;
     }
 
+    /* PROJECT */
+
     .projects-grid {
         grid-template-columns: 1fr;
         justify-content: center;
@@ -413,7 +461,7 @@ footer p {
 
     .project {
         margin-bottom: 20px;
-        width: fit-content;
+        width: 100%;
     }
 
     .project-image {
@@ -425,6 +473,8 @@ footer p {
     .project-info {
         width: 100%;
     }
+
+    /* CONTACT */
 
     #contact {
         grid-template-columns: 1fr;
@@ -457,6 +507,8 @@ footer p {
     #contact p {
         font-size: 0.9rem;
     }
+
+    /* FOOTER */
 
     footer {
         padding: 25px 15px;

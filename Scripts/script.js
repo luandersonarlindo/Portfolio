@@ -1,3 +1,6 @@
+import React, { useRef } from 'react';
+import emailjs from '@emailjs';
+
 const toggleButton = document.getElementById('navbarToggle');
 const navbarNav = document.querySelector('.navbar-nav');
 
@@ -10,12 +13,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => {
     navbarNav.classList.remove('active');
   });
-});
-
-document.querySelector('form').addEventListener('submit', function (event) {
-  event.preventDefault();
-  alert('Mensagem enviada com sucesso!');
-  this.reset();
 });
 
 function adjustLayout() {
