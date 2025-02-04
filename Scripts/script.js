@@ -1,5 +1,3 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs';
 
 const toggleButton = document.getElementById('navbarToggle');
 const navbarNav = document.querySelector('.navbar-nav');
