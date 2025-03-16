@@ -685,6 +685,10 @@ div>.project-card {
         justify-items: center;
     }
 
+    .image-headline {
+        order: 0;
+    }
+
     .text-primary {
         justify-items: center;
     }
