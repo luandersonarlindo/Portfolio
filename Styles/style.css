@@ -466,17 +466,10 @@ div>.project-card {
     align-items: center;
     padding: 24px;
     gap: 24px;
-    /*
-    width: 385px;
-    min-width: 300px;
-    max-width: 420px;
-    height: 420px;
-    */
     height: 420px;
     background-color: var(--primary-color-01);
     border-radius: 16px;
     transition: all ease-out 0.25s;
-    cursor: pointer;
 }
 
 .project-card:hover {
@@ -521,6 +514,20 @@ div>.project-card {
     text-align: justify;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+.social-link {
+    display: grid;
+    transition: all ease-out 0.25s;
+    opacity: 0;
+    position: absolute;
+    gap: 8px;
+    transform: translate(600%, -0%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.project-card:hover .social-link {
+    opacity: 1;
 }
 
 /* Contato */
@@ -627,6 +634,11 @@ div>.project-card {
         gap: 24px;
     }
 
+    .social-link {
+        transform: translate(425%, -0%);
+        -ms-transform: translate(-50%, -50%)
+    }
+
     .footer {
         width: 95%;
     }
@@ -701,6 +713,11 @@ div>.project-card {
         align-items: center;
     }
 
+    .social-link {
+        transform: translate(530%, -0%);
+        -ms-transform: translate(-50%, -50%)
+    }
+
     .text-contact {
         justify-items: center;
     }
@@ -760,5 +777,10 @@ div>.project-card {
 
     .project-card {
         max-width: 300px;
+    }
+
+    .social-link {
+        transform: translate(425%, -0%);
+        -ms-transform: translate(-50%, -50%)
     }
 }
