@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Luanderson Arlindo</title>
-    <link rel="stylesheet" href="Styles/home.css">
+    <link rel="stylesheet" href="Styles/style.css">
 </head>
 
 <body>
@@ -13,9 +13,7 @@
         <nav class="navbar">
             <div class="navbar-container">
                 <a href="#" class="navbar-brand">Luanderson</a>
-
-                <button class="navbar-toggle" id="navbarToggle">☰</button>
-
+                <button class="icon-button-secondary" id="navbarToggle"><img src="Icons/list.svg" alt="List"></button>
                 <ul class="navbar-nav">
                     <li class="nav-item"><a href="#headline" class="nav-link">Home</a></li>
 
@@ -24,6 +22,12 @@
                     <li class="nav-item"><a href="#project" class="nav-link">Projetos</a></li>
 
                     <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
+
+                    <div class="nav-line"></div>
+
+                    <button class="icon-button-primary">
+                        <img src="Icons/sun-dim.svg" alt="SunDim">
+                    </button>
                 </ul>
             </div>
         </nav>
@@ -33,17 +37,18 @@
         <section id="headline" class="grid-section">
             <div class="image-headline"><img src="Image/SVG/Programmer-amico.svg" alt="Programmer"></div>
 
-            <div class="headline-content">
+            <article class="headline-content">
                 <h1 class="Rm">Luanderson Arlindo</h1>
 
                 <div class="text-primary">
                     <h2 class="h2">Desenvolvedor Backend</h2>
-                    <p class="paragraph">Busco uma oportunidade para crescer profissionalmente, oferecendo soluções práticas e colaborando com equipes para alcançar resultados.</p>
+                    <p class="paragraph">Busco uma oportunidade para crescer profissionalmente, oferecendo soluções
+                        práticas e colaborando com equipes para alcançar resultados.</p>
                 </div>
 
                 <div class="area-buttons">
                     <button class="button-secondary">
-                        <span><img src="Icons/read-cv-logo.svg" alt="read-cv-logo"></span>
+                        <span><img src="Icons/read-cv-logo.svg" alt="ReadCV"></span>
 
                         <p class="paragraph">My resume</p>
                     </button>
@@ -54,13 +59,13 @@
                         <span><img src="Icons/arrow-right.svg" alt="ArrowRight"></span>
                     </button>
                 </div>
-            </div>
+            </article>
         </section>
 
         <section id="about" class="grid-section">
-            <div class="image-about"><img src="Image/New-Imagens/Foto-perfil.jpg" alt="Foto-perfil"></div>
+            <div class="image-about"><img src="Image/SVG/Nerd-amico.svg" alt="Nerd"></div>
 
-            <div class="about-content">
+            <article class="about-content">
                 <div class="tech-stack">
                     <span>
                         <img src="Icons/logos-javascript-plain-2.svg" alt="JavaScript">
@@ -100,25 +105,29 @@
                     <p class="section-title">Sou um desenvolvedor backend em busca da minha primeira oportunidade.</p>
 
                     <p class="paragraph">
-                        Tenho experiência prática com Spring Boot no desenvolvimento de aplicações escaláveis e domínio em bancos de dados relacionais (MySQL e PostgreSQL). Familiarizado com metodologias ágeis, como Scrum, aplico meus conhecimentos em algoritmos e estruturas de dados para solucionar desafios técnicos de forma proativa. Também possuo habilidades em Java, JavaScript, Node.js, HTML e CSS, sempre seguindo boas práticas de desenvolvimento.
+                        Tenho experiência prática com Spring Boot no desenvolvimento de aplicações escaláveis e domínio
+                        em bancos de dados relacionais (MySQL e PostgreSQL). Familiarizado com metodologias ágeis, como
+                        Scrum, aplico meus conhecimentos em algoritmos e estruturas de dados para solucionar desafios
+                        técnicos de forma proativa. Também possuo habilidades em Java, JavaScript, Node.js, HTML e CSS,
+                        sempre seguindo boas práticas de desenvolvimento.
                     </p>
                 </div>
 
                 <button class="button-primary">
                     <span>
-                        <img src="Icons/read-cv-logo.svg" alt="read-cv-logo">
+                        <img src="Icons/read-cv-logo.svg" alt="ReadCV">
                     </span>
 
                     <p class="paragraph">My resume</p>
                 </button>
-            </div>
+            </article>
         </section>
 
-        <section id="project">
-            <div class="project-content">
+        <section id="project" class="project">
+            <article class="project-content">
                 <h1 class="h1">Projetos</h1>
                 <p class="section-title">Confira meus projetos em destaque.</p>
-            </div>
+            </article>
 
             <div class="projects-grid">
 
@@ -237,13 +246,14 @@
         </section>
 
         <section id="contact" class="grid-section">
-            <div class="contact-image"><img src="Image/SVG/Live-collaboration-amico.svg" alt="Contact"></div>
+            <div class="image-contact"><img src="Image/SVG/Live collaboration-amico.svg" alt="Contact"></div>
 
-            <div class="contact-content">
+            <article class="contact-content">
                 <div class="text-contact">
                     <h1 class="h1">Contato</h1>
 
-                    <p class="section-title">Caso tenha interesse em meu trabalho, estou à disposição para conversarmos sobre uma possível colaboração.</p>
+                    <p class="section-title">Caso tenha interesse em meu trabalho, estou à disposição para conversarmos
+                        sobre uma possível colaboração.</p>
 
                     <div class="tech-stack">
                         <button class="icon-button-secondary">
@@ -280,24 +290,28 @@
                         </button>
                     </form>
                 </div>
-            </div>
+            </article>
         </section>
     </main>
 
-    <footer>
-        <p>Luanderson Arlindo 2025. Layout based on Rocksteader Template.</p>
+    <footer id="footer" class="footer">
+        <p class="paragraph">Luanderson Arlindo 2025. Layout based on Rocksteader Template.</p>
 
-        <div class="social-media">
-            <a href="https://github.com/luandersonarlindo" target="_blank">GitHub</a>
+        <ul class="social-media">
+            <li class="social-item"><a href="https://github.com/luandersonarlindo" target="_blank"
+                    class="paragraph">GitHub</a></li>
 
-            <a href="https://www.linkedin.com/in/luandersonarlindo" target="_blank">LinkedIn</a>
+            <li class="social-item"><a href="https://www.linkedin.com/in/luandersonarlindo" target="_blank"
+                    class="paragraph">LinkedIn</a>
+            </li>
 
-            <a href="https://www.instagram.com/luanderson.arlindo/" target="_blank">Instagram</a>
+            <li class="social-item"><a href="https://www.instagram.com/luanderson.arlindo/" target="_blank"
+                    class="paragraph">Instagram</a></li>
 
             <button class="icon-button-primary">
                 <a href="#headline"><img src="Icons/arrow-up.svg" alt="ArrowUp"></a>
             </button>
-        </div>
+        </ul>
     </footer>
 
     <script src="Scripts/script.js"></script>
