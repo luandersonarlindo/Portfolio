@@ -33,7 +33,7 @@
 .Rm {
     font-family: var(--font-Rm);
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.4;
@@ -217,10 +217,12 @@ body {
     height: 48px;
     cursor: pointer;
     transition: all ease-out 0.25s;
+    filter: drop-shadow(0 0px 4px rgba(0, 0, 0, 0.25));
 }
 
 .icon-button-primary:hover {
     background-color: var(--primary-color-01);
+    box-shadow: none;
 }
 
 .icon-button-primary a {
@@ -243,10 +245,12 @@ body {
     height: 48px;
     cursor: pointer;
     transition: all ease-out 0.25s;
+    box-shadow: 0 0px 4px rgba(255, 255, 255, 0.25);
 }
 
 .icon-button-secondary:hover {
     background-color: var(--primary-color-02);
+    box-shadow: none;
 }
 
 .icon-button-secondary a {
@@ -320,7 +324,7 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--text-secondary);
-    transition: color 0.3s;
+    transition: all ease-out 0.25s;
 }
 
 .nav-link:hover {
@@ -409,6 +413,7 @@ div>.project-card {
 .image-headline,
 .image-about,
 .image-contact {
+    width: 100%;
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -421,6 +426,10 @@ div>.project-card {
 .image-contact img {
     max-width: 480px;
     min-width: 280px;
+}
+
+.image-about img{
+    border-radius: 100%;
 }
 
 /* Projetos */
@@ -629,8 +638,7 @@ div>.project-card {
     }
 
     .projects-grid {
-        grid-template-columns: repeat(auto-fit, 300px);
-        grid-template-rows: repeat(auto-fit, minmax(420px, 1fr));
+        grid-template-rows: 1fr;
         gap: 24px;
     }
 
@@ -704,6 +712,7 @@ div>.project-card {
 
     .project-card {
         max-width: 350px;
+        height: 400px;
     }
 
     .project-image {
@@ -776,11 +785,16 @@ div>.project-card {
     }
 
     .headline-content h1 {
-        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .image-about img{
+        width: 100%;
     }
 
     .project-card {
         max-width: 300px;
+        height: 385px;
     }
 
     .social-link {
