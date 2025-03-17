@@ -379,13 +379,21 @@ div>.project-card {
         inset 0px 1px 0px rgba(255, 255, 255, 0.03);
 }
 
-.project-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+/* Headline e Sobre */
+
+.headline-content h2 {
+    width: 21ch;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 2.5s steps(20) infinite alternate-reverse;
 }
 
-/* Headline e Sobre */
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
+}
+
 .headline-content,
 .about-content,
 .contact-content {
@@ -428,7 +436,7 @@ div>.project-card {
     min-width: 280px;
 }
 
-.image-about img{
+.image-about img {
     border-radius: 100%;
 }
 
@@ -464,8 +472,11 @@ div>.project-card {
     align-content: center;
     gap: 32px;
     padding: 0px;
-
     max-width: 1360px;
+}
+
+.projects-grid:hover> :not(:hover) {
+    opacity: 0.5;
 }
 
 .project-card {
@@ -478,7 +489,7 @@ div>.project-card {
     height: 420px;
     background-color: var(--primary-color-01);
     border-radius: 16px;
-    transition: all ease-out 0.25s;
+    transition: opacity ease 0.5s;
 }
 
 .project-card:hover {
@@ -487,8 +498,7 @@ div>.project-card {
 }
 
 .project-image {
-    width: 100%;
-    height: 200px;
+    aspect-ratio: 16/9;
     margin: auto;
     border-radius: 16px;
     overflow: hidden;
@@ -566,7 +576,7 @@ div>.project-card {
 }
 
 #message {
-    height: 15vh;
+    height: 8rem;
     resize: none;
 }
 
@@ -643,7 +653,7 @@ div>.project-card {
     }
 
     .social-link {
-        transform: translate(425%, -0%);
+        transform: translate(600%, -0%);
         -ms-transform: translate(-50%, -50%)
     }
 
@@ -788,7 +798,7 @@ div>.project-card {
         text-align: center;
     }
 
-    .image-about img{
+    .image-about img {
         width: 100%;
     }
 
